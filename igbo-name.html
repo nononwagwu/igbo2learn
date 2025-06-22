@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Get Your Igbo Name</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <style>
+    .name-container {
+      max-width: 700px;
+      margin: 60px auto;
+      background-color: #fff8f0;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .name-container h2 {
+      color: #8b0000;
+    }
+
+    .name-container label {
+      margin-right: 20px;
+      font-size: 16px;
+    }
+
+    .name-container button {
+      padding: 12px 20px;
+      background-color: #8b0000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .name-container button:hover {
+      background-color: #a52a2a;
+    }
+
+    .name-result {
+      font-size: 22px;
+      color: #4b2e2e;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="name-container">
+    <h2>Get Your Igbo Name</h2>
+    <p>Select your gender and click the button to receive a beautiful Igbo name!</p>
+
+    <div>
+      <label><input type="radio" name="gender" value="male" /> Male</label>
+      <label><input type="radio" name="gender" value="female" /> Female</label>
+    </div>
+
+    <button onclick="generateName()">Reveal My Igbo Name</button>
+
+    <div class="name-result" id="nameResult"></div>
+  </div>
+
+  <script>
+    const maleNames = [
+  { name: "Chukwudi", meaning: "There is God" },
+  { name: "Obinna", meaning: "Father’s heart" },
+  { name: "Ifeanyi", meaning: "Nothing is impossible with God" },
+  { name: "Somtochukwu", meaning: "Join me in praising God" },
+  { name: "Chinonso", meaning: "God is near" },
+  { name: "Nnonyechukwu", meaning: "God is with us (this is also the author's name!)" }
+];
+
+
+    const femaleNames = [
+      { name: "Adaeze", meaning: "Princess" },
+      { name: "Ngozi", meaning: "Blessing" },
+      { name: "Uchechi", meaning: "God’s will" },
+      { name: "Amarachi", meaning: "God’s grace" },
+      { name: "Ifunanya", meaning: "Love" }
+    ];
+
+    function generateName() {
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const resultDiv = document.getElementById("nameResult");
+
+      if (!gender) {
+        resultDiv.textContent = "Please select a gender first!";
+        resultDiv.style.color = "orange";
+        return;
+      }
+
+      const nameList = gender.value === "male" ? maleNames : femaleNames;
+      const random = nameList[Math.floor(Math.random() * nameList.length)];
+
+      resultDiv.innerHTML = `${random.name} – <i>${random.meaning}</i>`;
+      resultDiv.style.color = "#4b2e2e";
+    }
+  </script>
+
+</body>
+</html>

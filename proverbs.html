@@ -24,28 +24,18 @@
       <p>Here are some beautiful Igbo proverbs and their meanings.</p>
     </section>
 
-    <!-- Proverbs Gallery Section -->
+    <!-- Proverbs Gallery -->
     <section class="proverbs-gallery">
       <h2>Proverbs Gallery</h2>
-      <div class="proverb-list">
-
-        <div class="proverb-card">
-          <h3>“A na-eme eji ama aka.”</h3>
-          <p><i>We fight evil by working on it together.</i></p>
-        </div>
-
-        <div class="proverb-card">
-          <h3>“Onye na-amaghị ebe mmiri bidoro mawa ya, amaghi ka ọ ga-esi kọọ ya n’ọsọ.”</h3>
-          <p><i>He who doesn’t know where the rain began cannot know where it will end.</i></p>
-        </div>
-
-        <div class="proverb-card">
-          <h3>“Ihe onye metara, ya jiri ya buru.”</h3>
-          <p><i>Whatever one brings upon themselves, let them carry it.</i></p>
-        </div>
-
-        <!-- Add more proverb-card divs as needed -->
+      <div class="proverb-list" id="proverb-list">
+        <!-- Proverbs will be loaded here by script.js -->
       </div>
+    </section>
+
+    <!-- Show Proverbs One-by-One Section -->
+    <section class="interactive-proverb" style="text-align:center; padding:2rem;">
+      <p id="proverb-display">Click the button to reveal a proverb.</p>
+      <button id="show-proverb">Show Proverb</button>
     </section>
   </main>
 
@@ -56,5 +46,7 @@
     </div>
   </footer>
 
+  <!-- Load  JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>

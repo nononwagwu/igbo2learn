@@ -326,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 320px;
   flex: 1 1 250px;
 
-  /* 🔥 This enables smooth scaling */
+  /*   smooth scaling */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

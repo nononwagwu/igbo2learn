@@ -1,0 +1,27 @@
+{
+  "greetings": [
+    { "igbo": "Ndeewo", "english": "Hello" },
+    { "igbo": "Kedu?", "english": "How are you?" },
+    { "igbo": "Daalu", "english": "Thank you" }
+  ],
+  "numbers": [
+    { "igbo": "Otu", "english": "One" },
+    { "igbo": "Abụọ", "english": "Two" },
+    { "igbo": "Atọ", "english": "Three" }
+  ],
+  "phrases": [
+    { "igbo": "Kedu ka ịmere?", "english": "How are you doing?" },
+    { "igbo": "Biko", "english": "Please" },
+    { "igbo": "Ee", "english": "Yes" }
+  ],
+  "food": [
+    { "igbo": "Jollof rice", "english": "Jollof rice" },
+    { "igbo": "Ofe Egusi", "english": "Melon seed soup" },
+    { "igbo": "Akpu", "english": "Fufu (cassava dough)" }
+  ],
+  "culture": [
+    { "igbo": "Iri ji", "english": "New Yam Festival" },
+    { "igbo": "Igba nkwu", "english": "Traditional marriage" },
+    { "igbo": "Igbu ichi", "english": "Initiation into manhood" }
+  ]
+}

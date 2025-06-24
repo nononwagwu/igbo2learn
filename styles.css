@@ -326,7 +326,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 320px;
   flex: 1 1 250px;
 
+
   /*   smooth scaling */
+
+  
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -334,3 +338,94 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);       /* Hover effect */
   box-shadow: 0 6px 18px rgba(0,0,0,0.15); /* Hover shadow */
 }
+
+
+.learn-container {
+  display: flex;
+  min-height: 80vh;
+  padding: 20px;
+  gap: 20px;
+  position: relative;  /* added to control stacking */
+}
+
+/* -------------------------------
+   SIDEBAR
+---------------------------------*/
+.sidebar {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 245px;
+  height: auto;          /* auto height, fits content */
+  max-height: 80vh;      /* max height, so it doesn’t get too tall */
+  overflow-y: auto;      /* adds scrollbar if content exceeds height */
+  padding: 20px;
+  background-color: #fff8f0;
+  border-right: 3px solid #8b0000;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 10;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #8b0000;
+}
+
+.sidebar button {
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #a52a2a;
+}
+
+/* -------------------------------
+   MAIN CONTENT
+---------------------------------*/
+.main-content {
+  margin-left: 220px;             /* push content to the right, clear sidebar */
+  padding: 20px;
+  width: calc(100% - 220px);     /* fill remaining width */
+  box-sizing: border-box;        /* so padding is inside width */
+  background-color: #fff8f0;
+  border-radius: 8px;
+  min-height: 400px;
+  color: #4b2e2e;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+/* -------------------------------
+   RESPONSIVE SIDEBAR & MAIN CONTENT
+---------------------------------*/
+@media (max-width: 768px) {
+  .learn-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: static;  /* remove fixed */
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 3px solid #8b0000;
+    overflow-y: visible;
+  }
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+} 
+

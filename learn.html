@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Learn Igbo Language</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div id="header-left">
+      <h1>Learn Igbo Language</h1>
+    </div>
+    <div class="header-button">
+      <button type="button" onclick="window.location.href='index.html'">Home</button>
+    </div>
+  </header>
+
+  <!-- Main container with sidebar + content -->
+  <div class="learn-container">
+
+    <!-- Sidebar with topics -->
+    <nav class="sidebar">
+      <h3>Topics</h3>
+      <button onclick="loadTopic('greetings')">Greetings</button>
+      <button onclick="loadTopic('numbers')">Numbers</button>
+      <button onclick="loadTopic('food')">Food</button>
+      <button onclick="loadTopic('culture')">Culture</button>
+    </nav>
+
+    <!-- Main content area for dynamic content -->
+    <main class="main-content" id="content-area">
+      <p>Select a topic on the left to learn about it.</p>
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 My Igbo Roots</p>
+  </footer>
+
+  <script src="learn.js"></script>
+</body>
+</html>

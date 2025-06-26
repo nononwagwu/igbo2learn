@@ -1,0 +1,27 @@
+[
+  {
+    "question": "What does “Kedu” mean in English?",
+    "options": ["Goodbye", "How are you?", "Thank you", "Come in"],
+    "answer": "How are you?"
+  },
+  {
+    "question": "What is the Igbo word for “Five”?",
+    "options": ["Atọ", "Ise", "Anọ", "Abụọ"],
+    "answer": "Ise"
+  },
+  {
+    "question": "What does “Ụtụtụ ọma” mean?",
+    "options": ["Good morning", "Good night", "See you later", "Please come"],
+    "answer": "Good morning"
+  },
+  {
+    "question": "How do you say “Thank you” in Igbo?",
+    "options": ["Kedu", "Daalu", "Jisie ike", "Biko"],
+    "answer": "Daalu"
+  },
+  {
+    "question": "What does “Abụọ” mean?",
+    "options": ["One", "Two", "Three", "Four"],
+    "answer": "Two"
+  }
+]

@@ -1,72 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Test Your Igbo</title>
-    <link rel="stylesheet" href="styles.css" />
-    <meta charset="UTF-8" />
-    <style>
-        .quiz-container {
-            max-width: 700px;
-            margin: 50px auto;
-            background-color: #fff8f0;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .quiz-container h2 {
-            color: #8b0000;
-        }
-        .quiz-container button {
-            margin-top: 20px;
-            padding: 10px 15px;
-            background-color: #8b0000;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        .quiz-container button:hover {
-            background-color: #a52a2a;
-        }
-    </style>
+  <title>Test Your Igbo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <style>
+    .quiz-container {
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #fff8f0;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .quiz-container h2 {
+      color: #8b0000;
+    }
+    .quiz-container label {
+      display: block;
+      padding: 5px 0;
+      cursor: pointer;
+    }
+    .quiz-container button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #8b0000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .quiz-container button:hover {
+      background-color: #a52a2a;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
+    <div style="margin-bottom: 1rem;">
+  <button onclick="window.location.href='index.html'" class="back-btn">← Back</button>
+</div>
 
-    <div class="quiz-container">
-        <h2>Test Your Igbo</h2>
-        <p><strong>Question 1:</strong> What does “Kedu” mean in English?</p>
-        <form id="quizForm">
-            <label><input type="radio" name="q1" value="a"> Goodbye</label><br>
-            <label><input type="radio" name="q1" value="b"> How are you?</label><br>
-            <label><input type="radio" name="q1" value="c"> Thank you</label><br>
-            <label><input type="radio" name="q1" value="d"> Come in</label><br>
-            <button type="submit">Submit Answer</button>
-        </form>
-        <p id="result"></p>
-    </div>
 
-    <script>
-        document.getElementById("quizForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            const answer = document.querySelector('input[name="q1"]:checked');
-            const result = document.getElementById("result");
+  <div class="quiz-container">
+    <h2>Test Your Igbo</h2>
+    <form id="quiz-form"></form>
+    <button id="submit-quiz">Submit Quiz</button>
+    <p id="result"></p>
+  </div>
 
-            if (!answer) {
-                result.textContent = "Please select an answer!";
-                result.style.color = "orange";
-                return;
-            }
-
-            if (answer.value === "b") {
-                result.textContent = "Correct! 'Kedu' means 'How are you?'.";
-                result.style.color = "green";
-            } else {
-                result.textContent = "Oops! Try again. The correct answer is 'How are you?'.";
-                result.style.color = "red";
-            }
-        });
-    </script>
-
+  <script src="quiz.js"></script>
 </body>
 </html>

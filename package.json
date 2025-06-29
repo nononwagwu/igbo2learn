@@ -1,0 +1,28 @@
+{
+  "name": "my-igbo-roots",
+  "version": "1.0.0",
+  "description": "**Igbo2Learn** is a cultural awareness web platform dedicated to celebrating and preserving Igbo language, traditions, proverbs, and heritage. It aims to connect users with their Igbo roots through interactive lessons, proverbs, quizzes, and cultural content.",
+  "main": "learn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nononwagwu/igbo2learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nononwagwu/igbo2learn/issues"
+  },
+  "homepage": "https://github.com/nononwagwu/igbo2learn#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.1"
+  }
+}

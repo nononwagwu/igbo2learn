@@ -1,6 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const BACKEND_URL = 'http://localhost:4000';
+
+  const token = localStorage.getItem('token');
+  if (!token) {
+    // Show message to user
+    document.getElementById('quiz-form').innerHTML = '<p style="color:red;font-weight:bold;">Please sign up or log in before taking the quiz. Redirecting...</p>';
+    document.getElementById('submit-quiz').disabled = true; // disable submit button
+
+    // Automatically redirect to auth page after 2 seconds
+    setTimeout(() => {
+      window.location.href = 'auth.html';
+    }, 2000);
+
+    return; // stop loading questions
+  }
+
   let questions = [];
-  const BACKEND_URL = 'http://localhost:3000'; // your backend URL
 
   // Fetch questions from backend
   fetch(`${BACKEND_URL}/quiz`)
@@ -41,17 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Get token from localStorage
-    const token = localStorage.getItem('token');
-
-    // Send answers to backend to check, include Authorization header with token
     fetch(`${BACKEND_URL}/quiz/submit`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}` // Send JWT token in header
+        'Authorization': `Bearer ${token}` // ✅ Send JWT token in header
       },
-      body: JSON.stringify({ userId: 'guest', answers }) // You can replace 'guest' with actual userId after auth
+      body: JSON.stringify({ answers })
     })
     .then(res => res.json())
     .then(result => {

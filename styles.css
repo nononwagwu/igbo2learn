@@ -66,25 +66,27 @@ body {
 ---------------------------------*/
 .hero {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   padding: 90px 60px;
+  min-height: 500px;
 
   background:
     linear-gradient(
       to right,
       rgba(250, 240, 230, 0.95) 0%,
-      rgba(250, 240, 230, 0.7) 45%,
-      rgba(250, 240, 230, 0.2) 75%,
-      rgba(250, 240, 230, 0) 100%
+      rgba(250, 240, 230, 0.9) 40%,
+      rgba(250, 240, 230, 0.55) 70%,
+      rgba(250, 240, 230, 0.4) 100%
     ),
     url("igbo-roots-main.jpg") center/cover no-repeat;
 }
 
 
 .hero-content {
-  width: 45%;
+  width: 55%;
+  max-width: 650px;
 }
 
 .hero-content h1 {

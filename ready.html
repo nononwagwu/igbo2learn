@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Get Ready | Igbo2Learn</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="igbo-icon.jpg" type="image/jpeg" />
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">Igbo2Learn</div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <span class="sidebar-icon">🏠</span><span>Home</span>
+            </a>
+            <a href="lessons.html" class="sidebar-link active">
+                <span class="sidebar-icon">📖</span><span>Learn</span>
+            </a>
+            <a href="quiz.html" class="sidebar-link">
+                <span class="sidebar-icon">📝</span><span>Quizzes</span>
+            </a>
+            <a href="proverbs.html" class="sidebar-link">
+                <span class="sidebar-icon">🪶</span><span>Proverbs</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="lessons-main">
+        <div class="ready-screen">
+            <div class="ready-icon">🎯</div>
+            <h1 class="ready-title">Time for the Quiz!</h1>
+            <p class="ready-subtitle">You've studied the words. Now let's test what you've learned.</p>
+
+            <div class="ready-info">
+                <div class="ready-info-item">
+                    <span class="ready-info-label">Topic</span>
+                    <span class="ready-info-value" id="topic-display">Greetings</span>
+                </div>
+                <div class="ready-info-item">
+                    <span class="ready-info-label">Questions</span>
+                    <span class="ready-info-value" id="question-count">5</span>
+                </div>
+            </div>
+
+            <a href="#" id="start-quiz-btn" class="flashcard-btn flashcard-btn-know" style="text-decoration: none; display: inline-block; padding: 14px 40px; font-size: 16px;">Start Quiz →</a>
+        </div>
+    </main>
+
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const topic = urlParams.get('topic') || 'greetings';
+
+    document.getElementById('topic-display').textContent = topic.charAt(0).toUpperCase() + topic.slice(1);
+    document.getElementById('start-quiz-btn').href = `quiz.html?topic=${topic}`;
+
+    // Fetch question count for this topic
+    fetch('quiz.json')
+        .then(res => res.json())
+        .then(data => {
+            const count = data[topic] ? data[topic].length : 0;
+            document.getElementById('question-count').textContent = count;
+        });
+</script>
+
+</body>
+</html>

@@ -1040,3 +1040,118 @@ main {
     cursor: not-allowed;
     transform: none !important;
 }
+
+/* -------------------------------
+   LESSON COMPLETE SCREEN (Screen 7)
+---------------------------------*/
+.lesson-complete-screen {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 60px 40px;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.trophy {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.complete-title {
+    font-size: 36px;
+    color: #4b2e2e;
+    margin: 0 0 12px 0;
+}
+
+.complete-subtitle {
+    color: #8a7060;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+.complete-score {
+    font-size: 56px;
+    color: #8b0000;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    margin: 10px 0 20px 0;
+}
+
+.complete-xp {
+    color: #6b4a3a;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.complete-xp strong {
+    color: #d4a574;
+    font-size: 18px;
+}
+
+.complete-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* -------------------------------
+   READY SCREEN (Quiz interstitial)
+---------------------------------*/
+.ready-screen {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 60px 40px;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.ready-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.ready-title {
+    font-size: 32px;
+    color: #4b2e2e;
+    margin: 0 0 12px 0;
+}
+
+.ready-subtitle {
+    color: #6b4a3a;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}
+
+.ready-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 24px 0;
+    border-top: 1px solid #f0e6d8;
+    border-bottom: 1px solid #f0e6d8;
+    margin-bottom: 30px;
+}
+
+.ready-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ready-info-label {
+    font-size: 12px;
+    color: #8a7060;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ready-info-value {
+    font-size: 20px;
+    color: #8b0000;
+    font-weight: 600;
+}

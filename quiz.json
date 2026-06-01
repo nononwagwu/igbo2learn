@@ -1,27 +1,63 @@
-[
-  {
-    "question": "What does “Kedu” mean in English?",
-    "options": ["Goodbye", "How are you?", "Thank you", "Come in"],
-    "answer": "How are you?"
-  },
-  {
-    "question": "What is the Igbo word for “Five”?",
-    "options": ["Atọ", "Ise", "Anọ", "Abụọ"],
-    "answer": "Ise"
-  },
-  {
-    "question": "What does “Ụtụtụ ọma” mean?",
-    "options": ["Good morning", "Good night", "See you later", "Please come"],
-    "answer": "Good morning"
-  },
-  {
-    "question": "How do you say “Thank you” in Igbo?",
-    "options": ["Kedu", "Daalu", "Jisie ike", "Biko"],
-    "answer": "Daalu"
-  },
-  {
-    "question": "What does “Abụọ” mean?",
-    "options": ["One", "Two", "Three", "Four"],
-    "answer": "Two"
-  }
-]
+{
+  "greetings": [
+    {
+      "question": "What does \"Ndeewo\" mean?",
+      "options": ["Goodbye", "Hello", "Thank you", "Please"],
+      "answer": "Hello"
+    },
+    {
+      "question": "How do you say \"Thank you\" in Igbo?",
+      "options": ["Kedu", "Daalu", "Biko", "Ndeewo"],
+      "answer": "Daalu"
+    },
+    {
+      "question": "What does \"Ụtụtụ ọma\" mean?",
+      "options": ["Good morning", "Good night", "Hello", "See you later"],
+      "answer": "Good morning"
+    },
+    {
+      "question": "Which word means \"How are you?\"",
+      "options": ["Daalu", "Ndeewo", "Kedu?", "Ka chi foo"],
+      "answer": "Kedu?"
+    },
+    {
+      "question": "What does \"Ka chi foo\" mean?",
+      "options": ["Good morning", "Good night", "Hello", "Thank you"],
+      "answer": "Good night"
+    }
+  ],
+  "numbers": [
+    {
+      "question": "What is the Igbo word for \"One\"?",
+      "options": ["Atọ", "Abụọ", "Otu", "Ise"],
+      "answer": "Otu"
+    },
+    {
+      "question": "What does \"Abụọ\" mean?",
+      "options": ["One", "Two", "Three", "Four"],
+      "answer": "Two"
+    },
+    {
+      "question": "Which word means \"Three\"?",
+      "options": ["Otu", "Abụọ", "Atọ", "Anọ"],
+      "answer": "Atọ"
+    }
+  ],
+  "phrases": [
+    {
+      "question": "What does \"Biko\" mean?",
+      "options": ["Yes", "Please", "Sorry", "No"],
+      "answer": "Please"
+    },
+    {
+      "question": "How do you say \"Yes\" in Igbo?",
+      "options": ["Ee", "Biko", "Daalu", "Mba"],
+      "answer": "Ee"
+    },
+    {
+      "question": "What does \"Kedu ka ịmere?\" mean?",
+      "options": ["How are you?", "How are you doing?", "What's your name?", "Where are you?"],
+      "answer": "How are you doing?"
+    }
+  ]
+}

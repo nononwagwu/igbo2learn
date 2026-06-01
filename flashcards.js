@@ -69,11 +69,8 @@ function nextCard() {
 
 // End session: hide cards, show completion screen
 function endSession() {
-    cardStage.style.display = 'none';
-    document.getElementById('total-cards').textContent = cards.length;
-    document.getElementById('knew-count').textContent = knewCount;
-    document.getElementById('dontknow-count').textContent = dontKnowCount;
-    completeScreen.style.display = 'block';
+    // Route to mini quiz for this topic
+    window.location.href = `ready.html?topic=${topic}`;
 }
 
 // Audio button placeholder — no real audio files yet

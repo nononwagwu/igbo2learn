@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Complete! | Igbo2Learn</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="igbo-icon.jpg" type="image/jpeg" />
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">Igbo2Learn</div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <span class="sidebar-icon">🏠</span><span>Home</span>
+            </a>
+            <a href="lessons.html" class="sidebar-link active">
+                <span class="sidebar-icon">📖</span><span>Learn</span>
+            </a>
+            <a href="quiz.html" class="sidebar-link">
+                <span class="sidebar-icon">📝</span><span>Quizzes</span>
+            </a>
+            <a href="proverbs.html" class="sidebar-link">
+                <span class="sidebar-icon">🪶</span><span>Proverbs</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="lessons-main">
+        <div class="lesson-complete-screen">
+            <div class="trophy">🏆</div>
+            <h1 class="complete-title">Great Job!</h1>
+            <p class="complete-subtitle">You scored</p>
+            <div class="complete-score">
+                <span id="score-num">0</span> / <span id="score-total">0</span>
+            </div>
+            <p class="complete-xp">You earned <strong id="xp-earned">0 XP</strong></p>
+
+            <div class="complete-actions">
+                <a href="lessons.html" class="flashcard-btn flashcard-btn-know" style="text-decoration: none; text-align: center;">Back to Lessons</a>
+                <a href="#" id="retry-btn" class="flashcard-btn flashcard-btn-dontknow" style="text-decoration: none; text-align: center;">Try Again</a>
+            </div>
+        </div>
+    </main>
+
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const topic = urlParams.get('topic') || 'greetings';
+    const score = parseInt(urlParams.get('score') || '0');
+    const total = parseInt(urlParams.get('total') || '0');
+
+    document.getElementById('score-num').textContent = score;
+    document.getElementById('score-total').textContent = total;
+    document.getElementById('xp-earned').textContent = `${score * 10} XP`;
+    document.getElementById('retry-btn').href = `learn.html?topic=${topic}`;
+</script>
+
+</body>
+</html>

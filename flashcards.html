@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Flashcards | Igbo2Learn</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="igbo-icon.jpg" type="image/jpeg" />
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">Igbo2Learn</div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <span class="sidebar-icon">🏠</span>
+                <span>Home</span>
+            </a>
+            <a href="lessons.html" class="sidebar-link active">
+                <span class="sidebar-icon">📖</span>
+                <span>Learn</span>
+            </a>
+            <a href="quiz.html" class="sidebar-link">
+                <span class="sidebar-icon">📝</span>
+                <span>Quizzes</span>
+            </a>
+            <a href="proverbs.html" class="sidebar-link">
+                <span class="sidebar-icon">🪶</span>
+                <span>Proverbs</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="lessons-main">
+
+        <header class="flashcards-header">
+            <a href="lessons.html" class="flashcards-back">← Back to Lessons</a>
+            <h1 id="topic-title">Greetings</h1>
+            <div class="flashcards-progress">
+                <span id="card-counter">1 / 5</span>
+            </div>
+        </header>
+
+        <!-- Flashcard study area -->
+        <div class="flashcard-stage">
+
+            <!-- The card itself -->
+            <div class="flashcard" id="flashcard">
+                <button class="flashcard-audio" id="audio-btn" aria-label="Play pronunciation">🔊</button>
+                <div class="flashcard-word" id="card-word">Ndeewo</div>
+                <div class="flashcard-pronunciation" id="card-pronunciation">(n-DEH-woh)</div>
+                <div class="flashcard-translation" id="card-translation">Hello</div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flashcard-actions">
+                <button class="flashcard-btn flashcard-btn-dontknow" id="btn-dontknow">I Don't Know</button>
+                <button class="flashcard-btn flashcard-btn-know" id="btn-know">I Know It</button>
+            </div>
+
+        </div>
+
+        <!-- Completion screen (hidden by default) -->
+        <div class="flashcard-complete" id="flashcard-complete" style="display: none;">
+            <h2>Session Complete! 🎉</h2>
+            <p>You studied <span id="total-cards">5</span> cards.</p>
+            <p class="completion-stats">
+                Knew: <strong id="knew-count">0</strong> &nbsp;|&nbsp;
+                Didn't know: <strong id="dontknow-count">0</strong>
+            </p>
+            <div class="completion-actions">
+                <button class="flashcard-btn flashcard-btn-know" onclick="location.reload()">Study Again</button>
+                <a href="lessons.html" class="flashcard-btn flashcard-btn-dontknow" style="text-decoration: none; display: inline-block;">Back to Lessons</a>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+<script src="flashcards.js"></script>
+</body>
+</html>

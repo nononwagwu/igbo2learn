@@ -1,27 +1,29 @@
 {
   "greetings": [
-    { "igbo": "Ndeewo", "english": "Hello" },
-    { "igbo": "Kedu?", "english": "How are you?" },
-    { "igbo": "Daalu", "english": "Thank you" }
+    { "igbo": "Ndeewo", "pronunciation": "n-DEH-woh", "english": "Hello" },
+    { "igbo": "Kedu?", "pronunciation": "KEH-doo", "english": "How are you?" },
+    { "igbo": "Daalu", "pronunciation": "DAH-loo", "english": "Thank you" },
+    { "igbo": "Ụtụtụ ọma", "pronunciation": "oo-too oh-mah", "english": "Good morning" },
+    { "igbo": "Ka chi foo", "pronunciation": "kah chee foh", "english": "Good night" }
   ],
   "numbers": [
-    { "igbo": "Otu", "english": "One" },
-    { "igbo": "Abụọ", "english": "Two" },
-    { "igbo": "Atọ", "english": "Three" }
+    { "igbo": "Otu", "pronunciation": "OH-too", "english": "One" },
+    { "igbo": "Abụọ", "pronunciation": "ah-BWAW", "english": "Two" },
+    { "igbo": "Atọ", "pronunciation": "ah-TAW", "english": "Three" }
   ],
   "phrases": [
-    { "igbo": "Kedu ka ịmere?", "english": "How are you doing?" },
-    { "igbo": "Biko", "english": "Please" },
-    { "igbo": "Ee", "english": "Yes" }
+    { "igbo": "Kedu ka ịmere?", "pronunciation": "KEH-doo kah ee-MEH-reh", "english": "How are you doing?" },
+    { "igbo": "Biko", "pronunciation": "BEE-koh", "english": "Please" },
+    { "igbo": "Ee", "pronunciation": "ay", "english": "Yes" }
   ],
   "food": [
-    { "igbo": "Jollof rice", "english": "Jollof rice" },
-    { "igbo": "Ofe Egusi", "english": "Melon seed soup" },
-    { "igbo": "Akpu", "english": "Fufu (cassava dough)" }
+    { "igbo": "Jollof rice", "pronunciation": "JAW-lof rahys", "english": "Jollof rice" },
+    { "igbo": "Ofe Egusi", "pronunciation": "OH-feh eh-GOO-see", "english": "Melon seed soup" },
+    { "igbo": "Akpu", "pronunciation": "AHK-poo", "english": "Fufu (cassava dough)" }
   ],
   "culture": [
-    { "igbo": "Iri ji", "english": "New Yam Festival" },
-    { "igbo": "Igba nkwu", "english": "Traditional marriage" },
-    { "igbo": "Igbu ichi", "english": "Initiation into manhood" }
+    { "igbo": "Iri ji", "pronunciation": "EE-ree jee", "english": "New Yam Festival" },
+    { "igbo": "Igba nkwu", "pronunciation": "EE-bah n-KWOO", "english": "Traditional marriage" },
+    { "igbo": "Igbu ichi", "pronunciation": "EE-boo EE-chee", "english": "Initiation into manhood" }
   ]
 }

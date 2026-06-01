@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Igbo Proverbs</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <title>Proverbs | Igbo2Learn</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="igbo-icon.jpg" type="image/jpeg" />
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div id="header-left">
-      <h1>Igbo Proverbs</h1>
-    </div>
-    <div class="header-button">
-      <button type="button" onclick="window.location.href='index.html'">Home</button>
-    </div>
-  </header>
+<div class="app-layout">
 
-  <main>
-    <!-- About Section -->
-    <section class="about">
-      <h2>Wisdom from Our Ancestors</h2>
-      <p>Here are some beautiful Igbo proverbs and their meanings.</p>
-    </section>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">Igbo2Learn</div>
 
-    <!-- Proverbs Gallery -->
-    <section class="proverbs-gallery">
-      <h2>Proverbs Gallery</h2>
-      <div class="proverb-list" id="proverb-list">
-        <!-- Proverbs will be loaded here by script.js -->
-      </div>
-    </section>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <span class="sidebar-icon">🏠</span>
+                <span>Home</span>
+            </a>
+            <a href="lessons.html" class="sidebar-link">
+                <span class="sidebar-icon">📖</span>
+                <span>Learn</span>
+            </a>
+            <a href="quiz.html" class="sidebar-link">
+                <span class="sidebar-icon">📝</span>
+                <span>Quizzes</span>
+            </a>
+            <a href="proverbs.html" class="sidebar-link active">
+                <span class="sidebar-icon">🪶</span>
+                <span>Proverbs</span>
+            </a>
+        </nav>
+    </aside>
 
-    <!-- Show Proverbs One-by-One Section -->
-    <section class="interactive-proverb" style="text-align:center; padding:2rem;">
-      <p id="proverb-display">Click the button to reveal a proverb.</p>
-      <button id="show-proverb">Show Proverb</button>
-    </section>
-  </main>
+    <!-- MAIN CONTENT -->
+    <main class="lessons-main">
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>© 2025 My Igbo Roots</p>
-    </div>
-  </footer>
+        <header class="lessons-header">
+            <h1>Igbo Proverbs</h1>
+            <p class="lessons-subtitle">Wisdom passed down through generations</p>
+        </header>
 
-  <!-- Load  JavaScript -->
-  <script src="script.js"></script>
+        <!-- Proverb of the Day -->
+        <div class="proverb-feature">
+            <div class="proverb-feature-label">Proverb of the Day</div>
+            <p id="proverb-display" class="proverb-feature-text">Click the button to reveal a proverb.</p>
+            <button id="show-proverb" class="proverb-feature-btn">Show Proverb</button>
+        </div>
+
+        <!-- Proverbs Gallery -->
+        <h2 class="proverbs-section-title">All Proverbs</h2>
+        <div class="proverb-list" id="proverb-list">
+            <!-- Cards inject from script.js -->
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

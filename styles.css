@@ -548,3 +548,171 @@ main {
         padding: 30px 20px;
     }
 }
+
+/* -------------------------------
+   QUIZ PAGE
+---------------------------------*/
+.quiz-wrapper {
+    max-width: 720px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.quiz-form > div {
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #f0e6d8;
+}
+
+.quiz-form > div:last-child {
+    border-bottom: none;
+}
+
+.quiz-form p {
+    font-weight: 600;
+    color: #4b2e2e;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.quiz-form label {
+    display: block;
+    padding: 10px 14px;
+    margin: 6px 0;
+    border: 1px solid #e5d8c8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    color: #4b2e2e;
+}
+
+.quiz-form label:hover {
+    background-color: #faf0e6;
+    border-color: #c9a896;
+}
+
+.quiz-form input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #8b0000;
+}
+
+.quiz-submit {
+    margin-top: 10px;
+    padding: 12px 24px;
+    background-color: #8b0000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.quiz-submit:hover {
+    background-color: #6b0000;
+    transform: translateY(-2px);
+}
+
+.quiz-result {
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* -------------------------------
+   PROVERBS PAGE
+---------------------------------*/
+.proverb-feature {
+    background-color: #fff;
+    border-left: 4px solid #8b0000;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 40px;
+    max-width: 720px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.proverb-feature-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8b0000;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.proverb-feature-text {
+    font-size: 18px;
+    color: #4b2e2e;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 0 18px 0;
+}
+
+.proverb-feature-btn {
+    background-color: #8b0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.proverb-feature-btn:hover {
+    background-color: #6b0000;
+    transform: translateY(-2px);
+}
+
+.proverbs-section-title {
+    font-size: 22px;
+    color: #4b2e2e;
+    margin: 30px 0 20px 0;
+}
+
+/* Override the old proverbs-gallery / proverb-list styles for new layout */
+.proverb-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.proverb-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    max-width: none;
+}
+
+.proverb-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+.proverb-card h3 {
+    font-size: 16px;
+    color: #8b0000;
+    margin: 0 0 10px 0;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.proverb-card p {
+    font-size: 14px;
+    color: #6b4a3a;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Hide the broken modal that script.js auto-creates */
+#proverb-modal {
+    display: none !important;
+}

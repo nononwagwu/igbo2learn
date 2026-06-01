@@ -1155,3 +1155,8 @@ main {
     color: #8b0000;
     font-weight: 600;
 }
+.lesson-card-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}

@@ -1,51 +1,75 @@
-async function loadTopic(topic) {      //to load topic
-  const res = await fetch('language.json');   // fetch json file
-  const data = await res.json();
-  const lessons = data[topic];
+const urlParams = new URLSearchParams(window.location.search);
+const topic = urlParams.get('topic') || 'greetings';
 
-  const contentArea = document.getElementById('content-area');
-  contentArea.innerHTML = `<h2>${capitalize(topic)}</h2>`;
+let cards = [];
+let currentIndex = 0;
 
-  lessons.forEach(entry => {
-    const para = document.createElement('p');
-    para.innerHTML = `<strong>${entry.igbo}</strong> - ${entry.english}`;
-    contentArea.appendChild(para);
-  });
-}
+const wordEl = document.getElementById('word');
+const pronunciationEl = document.getElementById('pronunciation');
+const englishEl = document.getElementById('english');
+const currentStepEl = document.getElementById('current-step');
+const totalStepsEl = document.getElementById('total-steps');
+const progressFill = document.getElementById('progress-fill');
+const titleEl = document.getElementById('lesson-title');
+const audioBtn = document.getElementById('audio-btn');
+const btnPrev = document.getElementById('btn-prev');
+const btnNext = document.getElementById('btn-next');
 
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
+async function loadLesson() {
+    try {
+        const res = await fetch('language.json');
+        const data = await res.json();
+        cards = data[topic];
 
-// Capitalizes first letter
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
+        if (!cards || cards.length === 0) {
+            wordEl.textContent = 'No lesson found';
+            return;
+        }
 
-// Loads topic content dynamically from JSON and displays it
-async function loadTopic(topic) {
-  try {
-    const res = await fetch('language.json');
-    if (!res.ok) throw new Error('Failed to load language.json');
-    const data = await res.json();
-
-    const lessons = data[topic];
-    const contentArea = document.getElementById('content-area');
-
-    if (!lessons) {
-      contentArea.innerHTML = `<p>Sorry, no data found for "${topic}".</p>`;
-      return;
+        titleEl.textContent = topic.charAt(0).toUpperCase() + topic.slice(1);
+        totalStepsEl.textContent = cards.length;
+        showStep(0);
+    } catch (err) {
+        console.error(err);
+        wordEl.textContent = 'Error loading lesson';
     }
-
-    contentArea.innerHTML = `<h2>${capitalize(topic)}</h2>`;
-
-    lessons.forEach(entry => {
-      const para = document.createElement('p');
-      para.innerHTML = `<strong>${entry.igbo}</strong> - ${entry.english}`;
-      contentArea.appendChild(para);
-    });
-  } catch (error) {
-    console.error(error);
-    document.getElementById('content-area').innerHTML = `<p>Error loading data.</p>`;
-  }
 }
+
+function showStep(index) {
+    const card = cards[index];
+    wordEl.textContent = card.igbo;
+    pronunciationEl.textContent = `(${card.pronunciation})`;
+    englishEl.textContent = card.english;
+    currentStepEl.textContent = index + 1;
+
+    const percent = ((index + 1) / cards.length) * 100;
+    progressFill.style.width = `${percent}%`;
+
+    // Update button state
+    btnPrev.disabled = index === 0;
+    btnNext.textContent = index === cards.length - 1 ? 'Practice with Flashcards →' : 'Next →';
+}
+
+btnNext.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        showStep(currentIndex);
+    } else {
+        // End of lesson → go to flashcards for the same topic
+        window.location.href = `flashcards.html?topic=${topic}`;
+    }
+});
+
+btnPrev.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        showStep(currentIndex);
+    }
+});
+
+audioBtn.addEventListener('click', () => {
+    audioBtn.classList.add('audio-active');
+    setTimeout(() => audioBtn.classList.remove('audio-active'), 300);
+});
+
+loadLesson();

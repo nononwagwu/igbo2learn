@@ -1,45 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Learn Igbo Language</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <title>Lesson | Igbo2Learn</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="igbo-icon.jpg" type="image/jpeg" />
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div id="header-left">
-      <h1>Learn Igbo Language</h1>
-    </div>
-    <div class="header-button">
-      <button type="button" onclick="window.location.href='index.html'">Home</button>
-    </div>
-  </header>
+<div class="app-layout">
 
-  <!-- Main container with sidebar + content -->
-  <div class="learn-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">Igbo2Learn</div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <span class="sidebar-icon">🏠</span><span>Home</span>
+            </a>
+            <a href="lessons.html" class="sidebar-link active">
+                <span class="sidebar-icon">📖</span><span>Learn</span>
+            </a>
+            <a href="quiz.html" class="sidebar-link">
+                <span class="sidebar-icon">📝</span><span>Quizzes</span>
+            </a>
+            <a href="proverbs.html" class="sidebar-link">
+                <span class="sidebar-icon">🪶</span><span>Proverbs</span>
+            </a>
+        </nav>
+    </aside>
 
-    <!-- Sidebar with topics -->
-    <nav class="sidebar">
-      <h3>Topics</h3>
-      <button onclick="loadTopic('greetings')">Greetings</button>
-      <button onclick="loadTopic('numbers')">Numbers</button>
-      <button onclick="loadTopic('food')">Food</button>
-      <button onclick="loadTopic('culture')">Culture</button>
-    </nav>
+    <!-- MAIN CONTENT -->
+    <main class="lessons-main">
 
-    <!-- Main content area for dynamic content -->
-    <main class="main-content" id="content-area">
-      <p>Select a topic on the left to learn about it.</p>
+        <header class="lesson-header">
+            <a href="lessons.html" class="flashcards-back">← Back to Lessons</a>
+            <h1 id="lesson-title">Greetings</h1>
+            <div class="lesson-progress-bar">
+                <div class="lesson-progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="lesson-progress-text">
+                Lesson <span id="current-step">1</span> of <span id="total-steps">5</span>
+            </div>
+        </header>
+
+        <div class="lesson-stage">
+
+            <div class="lesson-card">
+                <div class="lesson-word-block">
+                    <h2 class="lesson-word" id="word">Ndeewo</h2>
+                    <button class="flashcard-audio" id="audio-btn" aria-label="Play pronunciation">🔊</button>
+                </div>
+                <div class="lesson-pronunciation" id="pronunciation">(n-DEH-woh)</div>
+
+                <div class="lesson-example">
+                    <h3>Meaning</h3>
+                    <p class="lesson-meaning" id="english">Hello</p>
+                </div>
+
+                <div class="lesson-tip">
+                    <span class="lesson-tip-icon">💡</span>
+                    <div>
+                        <strong>Tip</strong>
+                        <p id="tip-text">A common Igbo greeting used when meeting someone.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-actions">
+                <button class="flashcard-btn flashcard-btn-dontknow" id="btn-prev">← Previous</button>
+                <button class="flashcard-btn flashcard-btn-know" id="btn-next">Next →</button>
+            </div>
+
+        </div>
+
     </main>
 
-  </div>
+</div>
 
-  <footer class="footer">
-    <p>© 2025 My Igbo Roots</p>
-  </footer>
-
-  <script src="learn.js"></script>
+<script src="learn.js"></script>
 </body>
 </html>

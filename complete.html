@@ -48,12 +48,17 @@
 
 </div>
 
+<script src="storage.js"></script>
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const topic = urlParams.get('topic') || 'greetings';
     const score = parseInt(urlParams.get('score') || '0');
     const total = parseInt(urlParams.get('total') || '0');
 
+    // Save the result to localStorage
+    saveLessonResult(topic, score, total);
+
+    // Display the results
     document.getElementById('score-num').textContent = score;
     document.getElementById('score-total').textContent = total;
     document.getElementById('xp-earned').textContent = `${score * 10} XP`;

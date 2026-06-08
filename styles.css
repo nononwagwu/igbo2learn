@@ -1160,3 +1160,96 @@ main {
     cursor: not-allowed;
     pointer-events: none;
 }
+
+/* -------------------------------
+   XP BANNER (Lessons page header)
+---------------------------------*/
+.xp-banner {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #d4a574;
+}
+
+.xp-banner-icon {
+    font-size: 32px;
+}
+
+.xp-banner-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8a7060;
+    margin-bottom: 2px;
+}
+
+.xp-banner-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: #8b0000;
+    font-family: 'Georgia', serif;
+}
+
+/* -------------------------------
+   LESSON CARD PROGRESS
+---------------------------------*/
+.lesson-progress-display {
+    margin-top: 12px;
+}
+
+.lesson-progress-track {
+    width: 100%;
+    height: 6px;
+    background-color: #f0e6d8;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.lesson-progress-fill-card {
+    height: 100%;
+    background-color: #4a8c4a;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+.lesson-progress-label {
+    font-size: 12px;
+    color: #8a7060;
+    font-weight: 500;
+}
+
+/* -------------------------------
+   RESET BUTTON
+---------------------------------*/
+.reset-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e5d8c8;
+    text-align: center;
+}
+
+.reset-btn {
+    background: none;
+    color: #8a7060;
+    border: 1px solid #c9a896;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+    background-color: #faf0e6;
+    border-color: #8b0000;
+    color: #8b0000;
+}

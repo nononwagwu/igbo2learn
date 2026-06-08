@@ -38,6 +38,15 @@
     <!-- MAIN CONTENT -->
     <main class="lessons-main">
 
+        <!-- XP Header -->
+        <div class="xp-banner">
+            <div class="xp-banner-icon">🔥</div>
+            <div class="xp-banner-text">
+                <div class="xp-banner-label">Total XP</div>
+                <div class="xp-banner-value" id="total-xp-display">0</div>
+            </div>
+        </div>
+
         <header class="lessons-header">
             <h1>Lessons</h1>
             <p class="lessons-subtitle">Choose a topic and start learning Igbo</p>
@@ -45,58 +54,141 @@
 
         <section class="lessons-grid">
 
-            <a href="learn.html?topic=greetings" class="lesson-card">
+            <a href="learn.html?topic=greetings" class="lesson-card" data-topic="greetings">
                 <div class="lesson-icon lesson-icon-green">📖</div>
                 <div class="lesson-info">
                     <h3>Greetings</h3>
                     <p>5 words</p>
+                    <div class="lesson-progress-display">
+                        <div class="lesson-progress-track">
+                            <div class="lesson-progress-fill-card"></div>
+                        </div>
+                        <span class="lesson-progress-label">Not started</span>
+                    </div>
                 </div>
             </a>
 
-            <a href="learn.html?topic=numbers" class="lesson-card">
+            <a href="learn.html?topic=numbers" class="lesson-card" data-topic="numbers">
                 <div class="lesson-icon lesson-icon-blue">🔢</div>
                 <div class="lesson-info">
                     <h3>Numbers</h3>
                     <p>5 words</p>
+                    <div class="lesson-progress-display">
+                        <div class="lesson-progress-track">
+                            <div class="lesson-progress-fill-card"></div>
+                        </div>
+                        <span class="lesson-progress-label">Not started</span>
+                    </div>
                 </div>
             </a>
 
-            <a href="learn.html?topic=family" class="lesson-card">
+            <a href="learn.html?topic=family" class="lesson-card" data-topic="family">
                 <div class="lesson-icon lesson-icon-orange">👨‍👩‍👧</div>
                 <div class="lesson-info">
                     <h3>Family</h3>
                     <p>5 words</p>
+                    <div class="lesson-progress-display">
+                        <div class="lesson-progress-track">
+                            <div class="lesson-progress-fill-card"></div>
+                        </div>
+                        <span class="lesson-progress-label">Not started</span>
+                    </div>
                 </div>
             </a>
 
-            <a href="learn.html?topic=time" class="lesson-card">
+            <a href="learn.html?topic=time" class="lesson-card" data-topic="time">
                 <div class="lesson-icon lesson-icon-purple">🕒</div>
                 <div class="lesson-info">
                     <h3>Time &amp; Days</h3>
                     <p>5 words</p>
+                    <div class="lesson-progress-display">
+                        <div class="lesson-progress-track">
+                            <div class="lesson-progress-fill-card"></div>
+                        </div>
+                        <span class="lesson-progress-label">Not started</span>
+                    </div>
                 </div>
             </a>
 
-            <a href="learn.html?topic=colors" class="lesson-card">
+            <a href="learn.html?topic=colors" class="lesson-card" data-topic="colors">
                 <div class="lesson-icon lesson-icon-pink">🎨</div>
                 <div class="lesson-info">
                     <h3>Colors</h3>
                     <p>5 words</p>
+                    <div class="lesson-progress-display">
+                        <div class="lesson-progress-track">
+                            <div class="lesson-progress-fill-card"></div>
+                        </div>
+                        <span class="lesson-progress-label">Not started</span>
+                    </div>
                 </div>
             </a>
 
-            <a href="learn.html?topic=phrases" class="lesson-card">
+            <a href="learn.html?topic=phrases" class="lesson-card" data-topic="phrases">
                 <div class="lesson-icon lesson-icon-teal">💬</div>
                 <div class="lesson-info">
                     <h3>Common Phrases</h3>
                     <p>5 words</p>
+                    <div class="lesson-progress-display">
+                        <div class="lesson-progress-track">
+                            <div class="lesson-progress-fill-card"></div>
+                        </div>
+                        <span class="lesson-progress-label">Not started</span>
+                    </div>
                 </div>
             </a>
 
         </section>
+
+        <!-- Reset Button -->
+        <div class="reset-section">
+            <button id="reset-btn" class="reset-btn">Reset Progress</button>
+        </div>
+
     </main>
 
 </div>
+
+<script src="storage.js"></script>
+<script>
+    // On page load: read progress from localStorage and update the UI
+    function updateLessonsUI() {
+        const progress = getProgress();
+
+        // Update total XP banner
+        document.getElementById('total-xp-display').textContent = progress.totalXP;
+
+        // Update each lesson card's progress
+        const cards = document.querySelectorAll('.lesson-card[data-topic]');
+        cards.forEach(card => {
+            const topic = card.dataset.topic;
+            const topicProgress = progress.topics[topic];
+
+            const fillBar = card.querySelector('.lesson-progress-fill-card');
+            const label = card.querySelector('.lesson-progress-label');
+
+            if (topicProgress) {
+                const percent = (topicProgress.bestScore / topicProgress.total) * 100;
+                fillBar.style.width = `${percent}%`;
+                label.textContent = `Best: ${topicProgress.bestScore} / ${topicProgress.total}`;
+            } else {
+                fillBar.style.width = '0%';
+                label.textContent = 'Not started';
+            }
+        });
+    }
+
+    // Reset button with confirmation
+    document.getElementById('reset-btn').addEventListener('click', () => {
+        const confirmed = confirm('Reset all your progress? This cannot be undone.');
+        if (confirmed) {
+            resetAllProgress();
+            updateLessonsUI();
+        }
+    });
+
+    updateLessonsUI();
+</script>
 
 </body>
 </html>

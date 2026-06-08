@@ -41,6 +41,16 @@
       "question": "Which word means \"Three\"?",
       "options": ["Otu", "Abụọ", "Atọ", "Anọ"],
       "answer": "Atọ"
+    },
+    {
+      "question": "What is the Igbo word for \"Five\"?",
+      "options": ["Anọ", "Atọ", "Ise", "Otu"],
+      "answer": "Ise"
+    },
+    {
+      "question": "What does \"Anọ\" mean?",
+      "options": ["Three", "Four", "Five", "Six"],
+      "answer": "Four"
     }
   ],
   "phrases": [
@@ -58,6 +68,97 @@
       "question": "What does \"Kedu ka ịmere?\" mean?",
       "options": ["How are you?", "How are you doing?", "What's your name?", "Where are you?"],
       "answer": "How are you doing?"
+    },
+    {
+      "question": "What does \"Mba\" mean?",
+      "options": ["Yes", "No", "Maybe", "Please"],
+      "answer": "No"
+    },
+    {
+      "question": "How do you say \"Sorry\" in Igbo?",
+      "options": ["Biko", "Ndo", "Daalu", "Ee"],
+      "answer": "Ndo"
+    }
+  ],
+  "family": [
+    {
+      "question": "What does \"Nne\" mean?",
+      "options": ["Father", "Mother", "Sister", "Brother"],
+      "answer": "Mother"
+    },
+    {
+      "question": "How do you say \"Father\" in Igbo?",
+      "options": ["Nne", "Nna", "Nwa", "Nwanne"],
+      "answer": "Nna"
+    },
+    {
+      "question": "What does \"Nwanne\" mean?",
+      "options": ["Mother", "Child", "Sibling", "Family"],
+      "answer": "Sibling"
+    },
+    {
+      "question": "Which word means \"Child\"?",
+      "options": ["Nne", "Nna", "Nwa", "Ezi na ụlọ"],
+      "answer": "Nwa"
+    },
+    {
+      "question": "What does \"Ezi na ụlọ\" mean?",
+      "options": ["Mother", "Father", "Family", "Sibling"],
+      "answer": "Family"
+    }
+  ],
+  "time": [
+    {
+      "question": "What does \"Ụbọchị\" mean?",
+      "options": ["Night", "Day", "Hour", "Today"],
+      "answer": "Day"
+    },
+    {
+      "question": "How do you say \"Today\" in Igbo?",
+      "options": ["Taa", "Echi", "Abalị", "Awa"],
+      "answer": "Taa"
+    },
+    {
+      "question": "What does \"Echi\" mean?",
+      "options": ["Today", "Tomorrow", "Yesterday", "Hour"],
+      "answer": "Tomorrow"
+    },
+    {
+      "question": "Which word means \"Night\"?",
+      "options": ["Ụbọchị", "Taa", "Abalị", "Echi"],
+      "answer": "Abalị"
+    },
+    {
+      "question": "What does \"Awa\" mean?",
+      "options": ["Day", "Night", "Hour", "Today"],
+      "answer": "Hour"
+    }
+  ],
+  "colors": [
+    {
+      "question": "What does \"Ọcha\" mean?",
+      "options": ["Black", "White", "Red", "Green"],
+      "answer": "White"
+    },
+    {
+      "question": "How do you say \"Black\" in Igbo?",
+      "options": ["Ọcha", "Oji", "Uhie", "Edo edo"],
+      "answer": "Oji"
+    },
+    {
+      "question": "What does \"Uhie\" mean?",
+      "options": ["White", "Black", "Red", "Yellow"],
+      "answer": "Red"
+    },
+    {
+      "question": "Which word means \"Green\"?",
+      "options": ["Ọcha", "Oji", "Edo edo", "Akwụkwọ ndụ"],
+      "answer": "Green"
+    },
+    {
+      "question": "What does \"Edo edo\" mean?",
+      "options": ["Red", "Green", "Yellow", "White"],
+      "answer": "Yellow"
     }
   ]
 }

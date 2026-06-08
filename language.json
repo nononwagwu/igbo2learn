@@ -9,12 +9,37 @@
   "numbers": [
     { "igbo": "Otu", "pronunciation": "OH-too", "english": "One" },
     { "igbo": "Abụọ", "pronunciation": "ah-BWAW", "english": "Two" },
-    { "igbo": "Atọ", "pronunciation": "ah-TAW", "english": "Three" }
+    { "igbo": "Atọ", "pronunciation": "ah-TAW", "english": "Three" },
+    { "igbo": "Anọ", "pronunciation": "ah-NAW", "english": "Four" },
+    { "igbo": "Ise", "pronunciation": "EE-seh", "english": "Five" }
   ],
   "phrases": [
     { "igbo": "Kedu ka ịmere?", "pronunciation": "KEH-doo kah ee-MEH-reh", "english": "How are you doing?" },
     { "igbo": "Biko", "pronunciation": "BEE-koh", "english": "Please" },
-    { "igbo": "Ee", "pronunciation": "ay", "english": "Yes" }
+    { "igbo": "Ee", "pronunciation": "ay", "english": "Yes" },
+    { "igbo": "Mba", "pronunciation": "m-BAH", "english": "No" },
+    { "igbo": "Ndo", "pronunciation": "n-DOH", "english": "Sorry" }
+  ],
+  "family": [
+    { "igbo": "Nne", "pronunciation": "n-NEH", "english": "Mother" },
+    { "igbo": "Nna", "pronunciation": "n-NAH", "english": "Father" },
+    { "igbo": "Nwanne", "pronunciation": "n-WAHN-neh", "english": "Sibling" },
+    { "igbo": "Nwa", "pronunciation": "n-WAH", "english": "Child" },
+    { "igbo": "Ezi na ụlọ", "pronunciation": "EH-zee nah OO-loh", "english": "Family" }
+  ],
+  "time": [
+    { "igbo": "Ụbọchị", "pronunciation": "oo-BOH-chee", "english": "Day" },
+    { "igbo": "Abalị", "pronunciation": "ah-BAH-lee", "english": "Night" },
+    { "igbo": "Taa", "pronunciation": "TAH", "english": "Today" },
+    { "igbo": "Echi", "pronunciation": "EH-chee", "english": "Tomorrow" },
+    { "igbo": "Awa", "pronunciation": "AH-wah", "english": "Hour" }
+  ],
+  "colors": [
+    { "igbo": "Ọcha", "pronunciation": "OH-chah", "english": "White" },
+    { "igbo": "Oji", "pronunciation": "OH-jee", "english": "Black" },
+    { "igbo": "Uhie", "pronunciation": "oo-HEE-eh", "english": "Red" },
+    { "igbo": "Akwụkwọ ndụ", "pronunciation": "ah-KWOO-kwoh n-DOO", "english": "Green" },
+    { "igbo": "Edo edo", "pronunciation": "EH-doh EH-doh", "english": "Yellow" }
   ],
   "food": [
     { "igbo": "Jollof rice", "pronunciation": "JAW-lof rahys", "english": "Jollof rice" },

@@ -56,3 +56,20 @@ function getTopicProgress(topic) {
 function resetAllProgress() {
     localStorage.removeItem(STORAGE_KEY);
 }
+
+// Save or update the user's profile without deleting learning progress.
+function saveUserProfile(name, level) {
+    const progress = getProgress();
+
+    progress.profile = {
+        name: name.trim(),
+        level: level
+    };
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+}
+
+// Retrieve the user's profile.
+function getUserProfile() {
+    return getProgress().profile || null;
+}

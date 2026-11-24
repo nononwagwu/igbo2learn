@@ -9,160 +9,206 @@
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">Igbo2Learn</div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Igbo2Learn</div>
 
-    <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="lessons.html">Learn</a></li>
-        <li><a href="quiz.html">Quizzes</a></li>
-        <li><a href="proverbs.html">Proverbs</a></li>
-</ul>
-</nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="lessons.html">Learn</a></li>
+            <li><a href="quiz.html">Quizzes</a></li>
+            <li><a href="proverbs.html">Proverbs</a></li>
+        </ul>
+    </nav>
 
 
-<!-- HERO SECTION -->
-<header class="hero">
+    <!-- HERO SECTION -->
+    <header class="hero">
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <h1>Learn Igbo Language and Culture</h1>
+            <h1>Learn Igbo Language and Culture</h1>
 
-        <p>
-            Explore proverbs, traditions, and interactive quizzes designed
-            to preserve and celebrate Igbo heritage.
-        </p>
+            <p>
+                Explore proverbs, traditions, and interactive quizzes designed
+                to preserve and celebrate Igbo heritage.
+            </p>
 
-        <div class="hero-buttons">
-            <button class="btn-primary" onclick="window.location.href='proverbs.html'">
-                📖 Explore Proverbs
-            </button>
-            
-            <button class="btn-outline" onclick="window.location.href='quiz.html'">
-                 ✏️ Test Your Igbo
-            </button>
-            
-            <button class="btn-outline" onclick="window.location.href='learn.html'">
-                 💬 Learn Language
-            </button>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="window.location.href='proverbs.html'">
+                    📖 Explore Proverbs
+                </button>
+
+                <button class="btn-outline" onclick="window.location.href='quiz.html'">
+                    ✏️ Test Your Igbo
+                </button>
+
+                <button class="btn-outline" onclick="window.location.href='learn.html'">
+                    💬 Learn Language
+                </button>
+            </div>
+
         </div>
 
-    </div>
-
-    
-
-</header>
 
 
-<!-- CTA SECTION -->
-<section class="cta">
-    <p>Start your journey into Igbo culture today.</p>
-
-    <button class="cta-button" onclick="window.location.href='lessons.html'" >
-        Start Learning →
-    </button>
-</section>
+    </header>
 
 
-<main>
+    <!-- CTA SECTION -->
+    <section class="cta">
+        <p>Start your journey into Igbo culture today.</p>
 
-<!-- ABOUT SECTION -->
-<!-- ABOUT SECTION -->
-<!-- WHAT YOU'LL FIND -->
-<section class="about" id="about">
+        <button class="cta-button" onclick="window.location.href='lessons.html'">
+            Start Learning →
+        </button>
+    </section>
 
-    <h2>Explore Igbo2Learn</h2>
 
-    <p class="section-intro">
-        Igbo2Learn is an interactive cultural platform designed to introduce users to Igbo language, traditions, and wisdom.
-        Explore proverbs, test your knowledge, and learn basic expressions while discovering the values that shape Igbo identity.
-    </p>
+    <main>
+        <!-- USER ONBOARDING -->
+        <section id="onboarding" class="onboarding" hidden>
+            <h2>Welcome to Igbo2Learn!</h2>
 
-    <div class="feature-row">
+            <p>Let's personalize your Igbo learning journey.</p>
 
-        <a href="learn.html" class="feature-card">
-            <span class="feature-icon">📖</span>
-            <div class="feature-text">
-                <h3>Learn the Language</h3>
-                <p>Start your Igbo journey with beginner-friendly lessons covering greetings, numbers, food, and everyday expressions.</p>
+            <form id="profile-form">
+                <label for="user-name">What should we call you?</label>
+
+                <input type="text" id="user-name" placeholder="Enter your name" required>
+
+                <label for="user-level">How much Igbo do you know?</label>
+
+                <select id="user-level" required>
+                    <option value="">Select your level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <button type="submit" class="btn-primary">
+                    Start My Journey →
+                </button>
+            </form>
+        </section>
+
+        <!-- PERSONALIZED WELCOME -->
+        <section id="welcome-message" class="onboarding" hidden>
+            <h2 id="welcome-name"></h2>
+            <p id="welcome-level"></p>
+
+            <button class="btn-primary" onclick="window.location.href='lessons.html'">
+                Continue Learning →
+            </button>
+
+            <button id="edit-profile" class="btn-outline">
+                Edit Profile
+            </button>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <!-- ABOUT SECTION -->
+        <!-- WHAT YOU'LL FIND -->
+        <section class="about" id="about">
+
+            <h2>Explore Igbo2Learn</h2>
+
+            <p class="section-intro">
+                Igbo2Learn is an interactive cultural platform designed to introduce users to Igbo language, traditions,
+                and wisdom.
+                Explore proverbs, test your knowledge, and learn basic expressions while discovering the values that
+                shape Igbo identity.
+            </p>
+
+            <div class="feature-row">
+
+                <a href="learn.html" class="feature-card">
+                    <span class="feature-icon">📖</span>
+                    <div class="feature-text">
+                        <h3>Learn the Language</h3>
+                        <p>Start your Igbo journey with beginner-friendly lessons covering greetings, numbers, food, and
+                            everyday expressions.</p>
+                    </div>
+                </a>
+
+                <a href="proverbs.html" class="feature-card">
+                    <span class="feature-icon">🪶</span>
+                    <div class="feature-text">
+                        <h3>Explore Proverbs</h3>
+                        <p>Discover Igbo proverbs that carry deep meaning and lessons shaping cultural identity across
+                            generations.</p>
+                    </div>
+                </a>
+
+                <a href="quiz.html" class="feature-card">
+                    <span class="feature-icon">📝</span>
+                    <div class="feature-text">
+                        <h3>Test Your Igbo</h3>
+                        <p>Check your knowledge with interactive quizzes designed to reinforce what you've learned.</p>
+                    </div>
+                </a>
+
             </div>
-        </a>
 
-        <a href="proverbs.html" class="feature-card">
-            <span class="feature-icon">🪶</span>
-            <div class="feature-text">
-                <h3>Explore Proverbs</h3>
-                <p>Discover Igbo proverbs that carry deep meaning and lessons shaping cultural identity across generations.</p>
-            </div>
-        </a>
+            <h3 class="igbo-motto">Omenala anyị. Akụ na ụba anyị.</h3>
 
-        <a href="quiz.html" class="feature-card">
-            <span class="feature-icon">📝</span>
-            <div class="feature-text">
-                <h3>Test Your Igbo</h3>
-                <p>Check your knowledge with interactive quizzes designed to reinforce what you've learned.</p>
-            </div>
-        </a>
-
-    </div>
-
-    <h3 class="igbo-motto">Omenala anyị. Akụ na ụba anyị.</h3>
-
-</section>
+        </section>
 
 
-<!-- FEATURES -->
-<!-- FEATURES -->
+        <!-- FEATURES -->
+        <!-- FEATURES -->
 
 
 
-<!-- HELPFUL LINKS -->
-<section class="links">
+        <!-- HELPFUL LINKS -->
+        <section class="links">
 
-<h2>Helpful Links</h2>
+            <h2>Helpful Links</h2>
 
-<a class="block" href="https://www.igboguide.org" target="_blank" rel="noopener noreferrer">
-<article>
-<h3>Igbo Guide</h3>
-<p>Explore detailed articles on Igbo traditions, history, and language.</p>
-</article>
-</a>
+            <a class="block" href="https://www.igboguide.org" target="_blank" rel="noopener noreferrer">
+                <article>
+                    <h3>Igbo Guide</h3>
+                    <p>Explore detailed articles on Igbo traditions, history, and language.</p>
+                </article>
+            </a>
 
-<a class="block" href="https://www.youtube.com/@LearnIgboNow" target="_blank" rel="noopener noreferrer">
-<article>
-<h3>Learn Igbo Now (YouTube)</h3>
-<p>Free video lessons for learning how to speak and understand Igbo.</p>
-</article>
-</a>
+            <a class="block" href="https://www.youtube.com/@LearnIgboNow" target="_blank" rel="noopener noreferrer">
+                <article>
+                    <h3>Learn Igbo Now (YouTube)</h3>
+                    <p>Free video lessons for learning how to speak and understand Igbo.</p>
+                </article>
+            </a>
 
-<a class="block" href="https://en.wikipedia.org/wiki/Igbo_people" target="_blank" rel="noopener noreferrer">
-<article>
-<h3>About the Igbo People</h3>
-<p>Wikipedia entry covering Igbo history, demographics, and culture.</p>
-</article>
-</a>
+            <a class="block" href="https://en.wikipedia.org/wiki/Igbo_people" target="_blank" rel="noopener noreferrer">
+                <article>
+                    <h3>About the Igbo People</h3>
+                    <p>Wikipedia entry covering Igbo history, demographics, and culture.</p>
+                </article>
+            </a>
 
-</section>
+        </section>
 
-</main>
+    </main>
 
 
-<!-- FOOTER -->
-<footer class="footer">
+    <!-- FOOTER -->
+    <footer class="footer">
 
-<div class="footer-content">
+        <div class="footer-content">
 
-<p>© 2025 Igbo2Learn</p>
+            <p>© 2025 Igbo2Learn</p>
 
-<nav>
-<a href="https://www.igboguide.org" target="_blank">Igbo Guide</a> |
-<a href="https://www.youtube.com/@LearnIgboNow" target="_blank">Learn Igbo Now</a>
-</nav>
+            <nav>
+                <a href="https://www.igboguide.org" target="_blank">Igbo Guide</a> |
+                <a href="https://www.youtube.com/@LearnIgboNow" target="_blank">Learn Igbo Now</a>
+            </nav>
 
-</div>
+        </div>
 
-</footer>
+    </footer>
 
 </body>
+<script src="storage.js"></script>
+<script src="profile.js"></script>
+
 </html>
